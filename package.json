@@ -1,0 +1,25 @@
+{
+  "name": "common-node-jt400",
+  "version": "1.0.0",
+  "description": "Common utils from jt400 for node js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "index.ts --exec ts-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AS400",
+    "JT400",
+    "DB2",
+    "IBM"
+  ],
+  "author": "Alejandro Meléndez",
+  "license": "ISC",
+  "dependencies": {
+    "java": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
