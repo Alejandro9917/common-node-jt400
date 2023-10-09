@@ -4,9 +4,13 @@
   "description": "Common utils from jt400 for node js",
   "main": "index.js",
   "scripts": {
-    "dev": "index.ts --exec ts-node",
+    "dev": "nodemon index.js",
+    "build-java": "ant archive -buildfile ./java",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "java/lib"
+  ],
   "keywords": [
     "AS400",
     "JT400",
@@ -19,7 +23,8 @@
     "java": "^0.13.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "typescript": "^5.2.2"
+    "@types/java": "^0.9.3",
+    "@types/node": "^18.7.5",
+    "nodemon": "^3.0.1"
   }
 }
