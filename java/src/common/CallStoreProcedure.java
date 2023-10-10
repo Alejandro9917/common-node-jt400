@@ -5,17 +5,17 @@ import com.ibm.as400.access.AS400JDBCDriver;
 import java.io.Reader;
 import java.sql.*;
 
-public class CallStoreProcedure {
+public class CallStoreProcedure {    
     public String example(){
         return "It's work";
     }
 
-    public String SimpleConnection() {
+    public String SimpleConnection(String host, String username, String password, String sql) {
         try {
             DriverManager.registerDriver(new AS400JDBCDriver());
-            Connection conn = DriverManager.getConnection("jdbc:as400://130.1.1.166", "middleware", "GU4T3TIGO0");
+            Connection conn = DriverManager.getConnection("jdbc:as400://" + host, username, password);
             System.out.println("[INFO] Connected.");
-            CallableStatement callableStatement = conn.prepareCall("CALL QSTCPGM.SP_HBU_QUO_SERVICIOS('','851-850','','-', ?)");
+            CallableStatement callableStatement = conn.prepareCall(sql);
             callableStatement.registerOutParameter(1, Types.CLOB);
             callableStatement.executeUpdate();
             Clob result = callableStatement.getClob(1);
