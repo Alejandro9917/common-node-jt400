@@ -1,8 +1,8 @@
 {
-  "name": "common-node-jt400",
-  "version": "1.0.1",
+  "name": "itm-node-jt400",
+  "version": "1.0.2",
   "description": "Common utils from jt400 for node js",
-  "main": "index.js",
+  "main": "lib/CallStoreProdcedure.js",
   "scripts": {
     "dev": "nodemon index.js",
     "build-java": "ant archive -buildfile ./java",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Alejandro9917/common-node-jt400"
+    "url": "git://github.com/Alejandro9917/common-node-jt400.git"
   },
   "files": [
     "java/lib"
