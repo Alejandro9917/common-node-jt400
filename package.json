@@ -1,12 +1,16 @@
 {
   "name": "common-node-jt400",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common utils from jt400 for node js",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "build-java": "ant archive -buildfile ./java",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Alejandro9917/common-node-jt400"
   },
   "files": [
     "java/lib"
